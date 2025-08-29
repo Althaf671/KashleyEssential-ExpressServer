@@ -1,0 +1,1 @@
+employees auth menggunakan token khusus bernama superToken
