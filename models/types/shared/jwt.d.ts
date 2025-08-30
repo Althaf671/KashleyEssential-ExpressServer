@@ -5,7 +5,7 @@ export type TAccessTokenPayload = {
     id: string,
     name: string,
     email: string,
-    isVerified: string,
+    isVerified: boolean,
     type: "access"
 };
 

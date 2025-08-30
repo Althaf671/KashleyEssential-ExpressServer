@@ -14,7 +14,7 @@ export class Logger {
     static start = (message: string): void => {
         const timestamp = Logger.getTimestamp();
         if (process.env.NODE_ENV === "development") {
-            console.log(chalk.bgBlue(`[DEV][START] ${timestamp} ${message}`));
+            console.log(chalk.bgBlue(`[DEV][OPERATION START] ${timestamp} ${message}`));
         };
     };
 
@@ -22,7 +22,7 @@ export class Logger {
     static end = (message: string): void => {
         const timestamp = Logger.getTimestamp();
         if (process.env.NODE_ENV === "development") {
-            console.log(chalk.bgYellow(`[DEV][END] ${timestamp} ${message}`));
+            console.log(chalk.bgYellow(`[DEV][OPERATION END] ${timestamp} ${message}`));
         };
     };
 

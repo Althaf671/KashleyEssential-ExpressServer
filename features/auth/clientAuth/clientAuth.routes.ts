@@ -7,8 +7,8 @@ const router = Router();
 
 // Register
 router.post(
-    "/register",
-    controller.RegisterController.bind(controller),
+    "/login",
+    controller.LoginController.bind(controller),
 );
 
 export default router;
