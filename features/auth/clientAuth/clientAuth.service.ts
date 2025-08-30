@@ -1,18 +1,18 @@
 // Basic auth service
-import { BasicAuthDal } from "./basicAuth.dal";
+import { ClientDal } from "./clientAuth.dal";
 import chalk from "chalk"
 
-export class BasicAuthService {
+export class ClientAuthService {
 
     // Private log 
-    private logger = (message: string) => {
+    private privLogger = (message: string) => {
         if (process.env.NODE_ENV === 'development') {
             console.log(chalk.bgGray(`[DEV][DEBUG] ${message}`)); 
         };
     };
 
     // DI: inject dal
-    constructor(private basicAuthDal: BasicAuthDal) {}; 
+    constructor(private clientDal: ClientDal) {}; 
 
     //========== Register service ==========//
     async RegisterService() {

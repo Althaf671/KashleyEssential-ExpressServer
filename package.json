@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn server.ts",
+    "dev": "NODE_ENV=development ts-node-dev --respawn server.ts",
+    "start": "NODE_ENV=production node dist/server.js",
     "seed": "ts-node --transpile-only prisma/seeder.ts"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.3.0",
     "nodemon": "^3.1.10",
     "prisma": "^6.15.0",

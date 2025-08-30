@@ -1,12 +1,13 @@
 // Basic auth controller
 
 import { Request, Response } from "express";
-import { BasicAuthService } from "./basicAuth.service";
+import {ClientAuthService } from "./clientAuth.service";
+import { Logger } from "../../../shared/helper/logger";
 
-export class BasicAuthController {
+export class ClientAuthController {
 
     // DI: inject service
-    constructor (private basicAuthService: BasicAuthService) {};
+    constructor (private clientAuthService: ClientAuthService) {};
 
     //=========== Register controller ===========//
     async RegisterController(req: Request, res: Response) {

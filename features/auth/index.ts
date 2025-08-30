@@ -1,10 +1,10 @@
 // Auth route
 import { Router } from "express";
-import basicAuthRoute from "./basicAuth/basicAuth.routes";
+import clientAuthRoute from "./clientAuth/clientAuth.routes";
 
 const router = Router();
 const path = "/auth";
 
-router.use(path, basicAuthRoute);
+router.use(path, clientAuthRoute);
 
 export default router;

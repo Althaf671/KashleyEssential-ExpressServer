@@ -3,6 +3,7 @@ import express from 'express';
 
 // routes
 import authRoutes from "./features/auth/index";
+import { Logger } from './shared/helper/logger';
 
 const app = express();
 const PORT = 3001;
@@ -11,5 +12,5 @@ const PORT = 3001;
 app.use("/api", authRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    Logger.info(`Server running at PORT: ${PORT}`);
 });
